@@ -32,4 +32,10 @@ export class Common extends Observable {
   public addContacts(contacts: any, successCallback: any, errorCallback: any) {}
 
   public showOnlyMyContacts(show: boolean) {}
+
+  public getTotalUnreadCount(successCallback: any) {}
+
+  public getUnreadCountForChannel(groupId: number, successCallback: any) {}
+
+  public getUnreadCountForContact(contactId: string, successCallback: any) {}
 }

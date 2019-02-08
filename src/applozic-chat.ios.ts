@@ -8,6 +8,7 @@ declare const ALUserDefaultsHandler: any;
 declare const ALApplozicSettings: any;
 declare const ALPushNotificationService: any;
 declare const ALChannelService: any;
+declare const ALUserService: any;
 declare const ALChannel: any;
 declare const id: any;
 declare const ALContactService: any;
@@ -166,6 +167,24 @@ export class ApplozicChat extends Common {
     } else {
       ALApplozicSettings.setContactTypeToFilter(null);
     }
+  }
+
+  public getTotalUnreadCount(successCallback: any) {
+    const alUserService = new ALUserService();
+    const count = alUserService.getTotalUnreadCount();
+    successCallback(count);
+  }
+
+  public getUnreadCountForChannel(groupId: number, successCallback: any) {
+    const alChannelService = new ALChannelService();
+    const count = alChannelService.getChannelByKey(groupId).unreadCount;
+    successCallback(count);
+  }
+
+  public getUnreadCountForContact(contactId: string, successCallback: any) {
+    const alContactService = new ALContactService();
+    const count = alContactService.loadContactByKeyValue('userId', contactId).unreadCount;
+    successCallback(count);
   }
 
   public defaultSettings() {

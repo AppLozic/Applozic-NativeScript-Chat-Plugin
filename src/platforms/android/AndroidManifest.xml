@@ -45,8 +45,7 @@
 		<string name="default_media_location_folder">YOUR_APP_NAME</string>
 		-->
 
-		<meta-data android:name="com.google.android.geo.API_KEY"
-				android:value="AIzaSyAYB1vPc4cpn_FJv68eS_ZGe1UasBNwxLI" />  <!--Replace with your geo api key from google developer console  -->
+	 <!--Replace with your geo api key from google developer console  -->
 		<!-- For testing purpose use AIzaSyAYB1vPc4cpn_FJv68eS_ZGe1UasBNwxLI
 		To disable the location sharing via map add this line ApplozicSetting.getInstance(context).disableLocationSharingViaMap(); in onSuccess of Applozic UserLoginTask -->
 

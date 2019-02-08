@@ -244,6 +244,30 @@ export class ApplozicChat extends Common {
     }
   }
 
+  public getTotalUnreadCount(successCallback: any) {
+    const ctx = this._getAndroidContext();
+    const count = new com.applozic.mobicomkit.api.conversation.database.MessageDatabaseService(
+      ctx
+    ).getTotalUnreadCount();
+    successCallback(count);
+  }
+
+  public getUnreadCountForChannel(groupId: number, successCallback: any) {
+    const ctx = this._getAndroidContext();
+    const count = new com.applozic.mobicomkit.api.conversation.database.MessageDatabaseService(
+      ctx
+    ).getUnreadMessageCountForChannel(new java.lang.Integer(groupId));
+    successCallback(count);
+  }
+
+  public getUnreadCountForContact(contactId: string, successCallback: any) {
+    const ctx = this._getAndroidContext();
+    const count = new com.applozic.mobicomkit.api.conversation.database.MessageDatabaseService(
+      ctx
+    ).getUnreadMessageCountForContact(contactId);
+    successCallback(count);
+  }
+
   /**
    * Helper method to ensure context usage.
    */
