@@ -73,9 +73,9 @@ applozicChat.logout(function(response) {
 a) For IOS upload your APNS push notification certificate to Applozic Dashboard page under 'Edit Application' section in order to enable real-time notification.
 
 
-Go to [Applozic Dashboard](https://dashboard.applozic.com/) **->Action -> Edit -> Push Notification -> Upload APNS Certificate for Development and Distribution environment**.
+Go to [Applozic Dashboard Push Notification](https://console.applozic.com/settings/pushnotification) **Push Notification -> Upload APNS Certificate for Development and Distribution environment**.
 
-b) For Android go to [Applozic Dashboard](https://dashboard.applozic.com/) and update the GCM/FCM server key under **Action -> Edit -> Push Notification -> Android -> GCM/FCM Server Key.**
+b) For Android go to [Applozic Dashboard Push Notification](https://console.applozic.com/settings/pushnotification) and update the GCM/FCM server key under **Push Notification -> GCM/FCM Key.**
 
 
 ## Android
@@ -84,7 +84,8 @@ Prerequisites:
 1) Download these files <https://github.com/reytum/Applozic-Push-Notification-FIles>
 2) Register you application in firebase console and download the ```google-services.json``` file.
 3) Get the FCM server key from firebase console.(There is a sender ID and a server key, make sure you get the server key).
-4) Go to applozic dashboard https://dashboard.applozic.com/, and put the GCM/FCM server key under *Action -> Edit -> Push Notification -> Android -> GCM/FCM Server Key*.
+4) Go to [Applozic Dashboard Push Notification](https://console.applozic.com/settings/pushnotification) and update the GCM/FCM server key under **Push Notification -> GCM/FCM Key.**
+
 
 Steps to follow:
 1) Copy the ```pushnotification``` folder from the above downloaded files and paste it in path ```<your project>/platforms/android/src/main/java/com/tns/```
