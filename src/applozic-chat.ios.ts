@@ -177,14 +177,22 @@ export class ApplozicChat extends Common {
 
   public getUnreadCountForChannel(groupId: number, successCallback: any) {
     const alChannelService = new ALChannelService();
-    const count = alChannelService.getChannelByKey(groupId).unreadCount;
-    successCallback(count);
+    const channel = alChannelService.getChannelByKey(groupId);
+    if (channel !== null) {
+      successCallback(channel.unreadCount);
+    } else {
+      successCallback(0);
+    }
   }
 
   public getUnreadCountForContact(contactId: string, successCallback: any) {
     const alContactService = new ALContactService();
-    const count = alContactService.loadContactByKeyValue('userId', contactId).unreadCount;
-    successCallback(count);
+    const contact = alContactService.loadContactByKeyValue('userId', contactId);
+    if (contact !== null) {
+      successCallback(contact.unreadCount);
+    } else {
+      successCallback(0);
+    }
   }
 
   public defaultSettings() {
