@@ -16,7 +16,5 @@ android {
 
 dependencies {
     // Describe plugin native Android dependencies like
-	// compile "groupName:pluginName:ver"
-    // EXAMPLE: compile "com.facebook.fresco:fresco:0.9.0+"
-	implementation 'com.applozic.communication.uiwidget:mobicomkitui:5.71'
+	implementation 'com.applozic.communication.uiwidget:mobicomkitui:5.77'
 }
