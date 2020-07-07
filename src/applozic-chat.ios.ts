@@ -27,6 +27,10 @@ export class ApplozicChat extends Common {
     alUser.authenticationTypeId = user.authenticationTypeId;
     alUser.imageLink = user.imageLink;
 
+    if (user.authenticationTypeId !== undefined) {
+      ALUserDefaultsHandler.setUserAuthenticationTypeId(user.authenticationTypeId);
+    }
+
     if (user.enableEncryption !== undefined) {
       ALUserDefaultsHandler.setEnableEncryption(user.enableEncryption);
     }
@@ -96,13 +100,21 @@ export class ApplozicChat extends Common {
   public launchChatWithGroupId(groupId: number, successCallback: any, errorCallback: any) {
     const alChatLauncher = ALChatLauncher.alloc().initWithApplicationId(ALUserDefaultsHandler.getApplicationKey());
     const alPushAssist = ALPushAssist.alloc().init();
-    alChatLauncher.launchIndividualChatWithGroupIdWithDisplayNameAndViewControllerObjectAndWithText(
-      null,
-      groupId,
-      null,
-      alPushAssist.topViewController,
-      null
-    );
+    const channelService = ALChannelService.alloc().init();
+    channelService.getChannelInformationOrClientChannelKeyWithCompletion(groupId, null, (alChannel) =>  {
+      if (alChannel !== null) {
+        alChatLauncher.launchIndividualChatWithGroupIdWithDisplayNameAndViewControllerObjectAndWithText(
+          null,
+          groupId,
+          null,
+          alPushAssist.topViewController,
+          null
+        );
+        successCallback('success');
+      } else {
+        errorCallback('Error in launching group');
+      }
+    });
   }
 
   public logout(successCallback: any, errorCallback: any) {
