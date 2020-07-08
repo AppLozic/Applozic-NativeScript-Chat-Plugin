@@ -1,6 +1,6 @@
 {
   "name": "nativescript-applozic-chat",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Nativescript plugin from Applozic that wraps the Native chat UI for android and iOS",
   "main": "applozic-chat",
   "typings": "index.d.ts",
@@ -46,18 +46,19 @@
   "homepage": "https://github.com/devashishmamgain/nativescript-applozic-chat",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "tns-core-modules": "^4.0.0",
-    "tns-platform-declarations": "^4.0.0",
+    "tns-core-modules": "~6.3.2",
+    "tns-platform-declarations": "^6.3.2",
     "lint-staged": "^7.0.4",
     "husky": "^0.14.3",
     "prettier": "~1.10.2",
-    "typescript": "^2.8.3",
-    "tslint": "5.9.1",
+    "typescript": "^3.9.6",
+    "tslint": "5.20.1",
     "prompt": "^1.0.0",
     "rimraf": "^2.5.0",
-    "semver": "^5.5.0"
+    "semver": "~5.7.1"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "bootstrapper": "nativescript-plugin-seed",
   "lint-staged": {
     "*.{ts, js, json, scss, md}": [
