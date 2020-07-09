@@ -151,7 +151,7 @@ export class ApplozicChat extends Common {
         intent.putExtra('groupId', response.getKey().intValue());
         intent.putExtra('takeOrder', true);
         activity.startActivity(intent);
-        successCallback(response);
+        successCallback('success');
       },
 
       onFailure: (response: any, exception: any, context: any) => {
