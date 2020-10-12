@@ -6,14 +6,14 @@
   "typings": "index.d.ts",
   "nativescript": {
     "platforms": {
-      "android": "3.0.0",
-      "ios": "3.0.0"
+      "android": "7.0.0",
+      "ios": "7.0.0"
     }
   },
   "scripts": {
     "precommit": "lint-staged",
     "tsc": "tsc -skipLibCheck",
-    "build": "npm i && tsc && npm run build.native",
+    "build": "npm i && ts-patch install && tsc && npm run build.native",
     "build.native": "node scripts/build-native.js",
     "postclone": "npm i && node scripts/postclone.js && cd ../demo && npm i && cd ../src && npm run plugin.link",
     "test.android": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build android && tns test android --justlaunch",
@@ -46,8 +46,9 @@
   "homepage": "https://github.com/devashishmamgain/nativescript-applozic-chat",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "tns-core-modules": "~6.3.2",
-    "tns-platform-declarations": "^6.3.2",
+    "@nativescript/core": "~7.0.0",
+    "@nativescript/types": "~7.0.0",
+    "@nativescript/webpack": "~3.0.0",
     "lint-staged": "^7.0.4",
     "husky": "^0.14.3",
     "prettier": "~1.10.2",
@@ -57,8 +58,7 @@
     "rimraf": "^2.5.0",
     "semver": "~5.7.1"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "bootstrapper": "nativescript-plugin-seed",
   "lint-staged": {
     "*.{ts, js, json, scss, md}": [

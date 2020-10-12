@@ -16,5 +16,5 @@ android {
 
 dependencies {
     // Describe plugin native Android dependencies like
-	implementation 'com.applozic.communication.uiwidget:mobicomkitui:5.80'
+	implementation 'com.applozic.communication.uiwidget:mobicomkitui:5.91'
 }
