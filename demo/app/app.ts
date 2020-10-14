@@ -1,5 +1,3 @@
-﻿import "./bundle-config";
-import * as application from 'tns-core-modules/application';
+import { Application } from '@nativescript/core';
 //application.start({ moduleName: "main-page" });
-application.start({ moduleName: "views/login/login" });
-
+Application.run({ moduleName: "views/login/login" });
