@@ -1,20 +1,18 @@
 /* Include.gradle configuration: http://docs.nativescript.org/plugins/plugins#includegradle-specification */
 
 android {
-
-
   	packagingOptions {
         exclude 'META-INF/DEPENDENCIES'
        	exclude 'META-INF/NOTICE'
        	exclude 'META-INF/LICENSE'
-    	exclude 'META-INF/LICENSE.txt'
+       	exclude 'META-INF/LICENSE.txt'
        	exclude 'META-INF/NOTICE.txt'
         exclude 'META-INF/ECLIPSE_.SF'
-    	exclude 'META-INF/ECLIPSE_.RSA'
+      	exclude 'META-INF/ECLIPSE_.RSA'
     }
 }
 
 dependencies {
     // Describe plugin native Android dependencies like
-	implementation 'com.applozic.communication.uiwidget:mobicomkitui:5.80'
+	implementation 'com.applozic.communication.uiwidget:mobicomkitui:5.92'
 }

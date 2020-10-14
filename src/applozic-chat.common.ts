@@ -1,4 +1,4 @@
-import { Observable } from 'tns-core-modules/data/observable';
+import { Observable } from '@nativescript/core';
 
 export class Common extends Observable {
   public message: string;
@@ -20,7 +20,6 @@ export class Common extends Observable {
   public launchChatWithGroupId(groupId: number, successCallback: any, errorCallback: any) {}
 
   public refreshToken(token: any, successCallback: any, errorCallback: any) {}
-
   public proccessNotification(data: any) {}
 
   public logout(successCallback: any, errorCallback: any) {}

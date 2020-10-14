@@ -1,4 +1,4 @@
-import * as app from 'tns-core-modules/application/application';
+import { Application } from '@nativescript/core';
 import { Common } from './applozic-chat.common';
 
 declare const com: any;
@@ -272,7 +272,7 @@ export class ApplozicChat extends Common {
    * Helper method to ensure context usage.
    */
   private _getAndroidContext() {
-    const ctx = app.android.context;
+    const ctx = Application.android.context;
     if (ctx === null) {
       setTimeout(() => {
         this._getAndroidContext();
@@ -284,7 +284,7 @@ export class ApplozicChat extends Common {
   }
 
   private _getCurrentActivity() {
-    const ctx = app.android.foregroundActivity;
+    const ctx = Application.android.foregroundActivity;
     if (ctx === null) {
       setTimeout(() => {
         this._getCurrentActivity();

@@ -11,12 +11,12 @@
 		<activity android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
 				android:label="@string/app_name"
 				android:theme="@style/ApplozicTheme"
-				android:parentActivityName="NativeScriptActivity"
+				android:parentActivityName="com.tns.NativeScriptActivity"
 				tools:node="replace">
 			<!-- Parent activity meta-data to support API level 7+ -->
 		<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
-				android:value="NativeScriptActivity" />
+				android:value="com.tns.NativeScriptActivity" />
 		</activity>
 	</application>
 </manifest>

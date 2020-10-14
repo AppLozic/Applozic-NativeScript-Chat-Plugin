@@ -1,4 +1,4 @@
-import { Observable } from 'tns-core-modules/data/observable';
+import { Observable } from "@nativescript/core";
 import { ApplozicChat } from 'nativescript-applozic-chat';
 
 export class HelloWorldModel extends Observable {
@@ -27,7 +27,7 @@ export class HelloWorldModel extends Observable {
     }, function(error) {
       console.log("logout error: "+ error);
     });*/
-    
+
     this.applozicChat.login(alUser, function(response) {
         console.log("onLoginSuccess: " + response);
         that.applozicChat.showAllRegisteredUsers(false);
