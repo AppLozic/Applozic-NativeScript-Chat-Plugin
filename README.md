@@ -25,11 +25,10 @@ npm run demo.ios
 #### Login/Register User
 ```js
     var alUser = {
-            'userId' : userId,   //Replace it with the userId of the logged in user
-            'password' : password,  //Put password here
+            'userId' : userId,   //Replace it with the userId of the logged in user NOTE: String userId
+            'password' : password,  //Put password here NOTE: String password
             'authenticationTypeId' : 1,
-            'applicationId' : 'applozic-sample-app',  //replace "applozic-sample-app" with Application Key from Applozic Dashboard
-            'deviceApnsType' : 0    //Set 0 for Development and 1 for Distribution (Release)
+            'applicationId' : 'applozic-sample-app'  //replace "applozic-sample-app" with Application Key from Applozic Dashboard
         };
 
     applozicChat.login(alUser, function(response) {
