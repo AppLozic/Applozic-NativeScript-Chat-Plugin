@@ -1,10 +1,10 @@
 {
   "dependencies": {
-    "nativescript-applozic-chat": "file:../src",
-    "@nativescript/theme": "~2.3.0",
-    "nativescript-unit-test-runner": "^0.3.4",
     "@nativescript/core": "7.0.11",
-    "@nativescript/webpack": "3.0.0"
+    "@nativescript/theme": "~2.3.0",
+    "@nativescript/webpack": "3.0.0",
+    "nativescript-applozic-chat": "file:../src",
+    "nativescript-unit-test-runner": "^0.3.4"
   },
   "devDependencies": {
     "@nativescript/android": "7.0.0",
