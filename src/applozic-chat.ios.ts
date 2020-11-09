@@ -101,7 +101,7 @@ export class ApplozicChat extends Common {
     const alChatLauncher = ALChatLauncher.alloc().initWithApplicationId(ALUserDefaultsHandler.getApplicationKey());
     const alPushAssist = ALPushAssist.alloc().init();
     const channelService = ALChannelService.alloc().init();
-    channelService.getChannelInformationOrClientChannelKeyWithCompletion(groupId, null, (alChannel) =>  {
+    channelService.getChannelInformationOrClientChannelKeyWithCompletion(groupId, null, alChannel => {
       if (alChannel !== null) {
         alChatLauncher.launchIndividualChatWithGroupIdWithDisplayNameAndViewControllerObjectAndWithText(
           null,
@@ -221,9 +221,6 @@ export class ApplozicChat extends Common {
     ALUserDefaultsHandler.setNavigationRightButtonHidden(false);
     ALUserDefaultsHandler.setBottomTabBarHidden(false);
     ALApplozicSettings.setTitleForConversationScreen('Chats');
-    ALApplozicSettings.setCustomNavRightButtonMsgVC(
-      false
-    ); /*  SET VISIBILITY FOR REFRESH BUTTON (COMES FROM TOP IN MSG VC)   */
     ALApplozicSettings.setTitleForBackButtonMsgVC('Back'); /*  SET BACK BUTTON FOR MSG VC  */
     ALApplozicSettings.setTitleForBackButtonChatVC('Back');
     /*  SET BACK BUTTON FOR CHAT VC */
@@ -251,6 +248,7 @@ export class ApplozicChat extends Common {
     // ****************** MESSAGE SEPERATE DATE COLOUR : DATE MESSAGE ******************/
     ALApplozicSettings.setMsgDateColor(UIColor.blackColor);
 
+    ALApplozicSettings.enableMessageDeleteForAllOption(true);
     /***************  SEND MESSAGE ABUSE CHECK  ******************/
 
     ALApplozicSettings.setAbuseWarningText('AVOID USE OF ABUSE WORDS');
