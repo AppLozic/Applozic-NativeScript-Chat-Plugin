@@ -1,6 +1,5 @@
 # Applozic NativeScript Chat Plugin
 
-
 ## Prerequisites
 
 ### iOS
@@ -12,15 +11,49 @@
 
 ## Installation
 
-```javascript
-tns plugin add nativescript-applozic-chat
+> For NativeScript 7 compatibility, run.
+
+
+```bash
+tns plugin add nativescript-applozic-chat@2.1.0
 ```
+
+> For NativeScript 6 compatibility, run.
+
+```bash
+tns plugin add nativescript-applozic-chat@1.6.0
+```
+
 Goto src folder and run
 ```
 npm run demo.ios
 ```
 
 ## Usage
+
+
+##### JavaScript
+
+Add import 
+```js
+var nativescript_applozic_chat = require("nativescript-applozic-chat");
+```
+
+And then inside your funcation you can create the object of ApplozicChat to access it.
+```js
+var applozicChat = new nativescript_applozic_chat.ApplozicChat();
+```
+
+##### TypeScript
+
+Add import 
+```js
+import { ApplozicChat } from "nativescript-applozic-chat";
+```
+And then inside your funcation you can create the object of ApplozicChat to access it.
+```js
+var applozicChat = new ApplozicChat();
+```
 
 #### Login/Register User
 ```js
