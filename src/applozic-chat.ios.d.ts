@@ -13,4 +13,5 @@ export declare class ApplozicChat extends Common {
     addContacts(contacts: any): void;
     showAllRegisteredUsers(showAll: boolean): void;
     defaultSettings(): void;
+    disableNotifications(disable: boolean, successCallback: any, errorCallback: any): void;
 }

@@ -268,6 +268,16 @@ export class ApplozicChat extends Common {
     successCallback(count);
   }
 
+  public disableNotifications(disable: boolean, successCallback: any, errorCallback: any) {
+    const ctx = this._getAndroidContext();
+    if (disable) {
+      com.applozic.mobicomkit.ApplozicClient.getInstance(ctx).disableNotification();
+    } else {
+      com.applozic.mobicomkit.ApplozicClient.getInstance(ctx).enableNotification();
+    }
+    successCallback('success');
+  }
+
   /**
    * Helper method to ensure context usage.
    */

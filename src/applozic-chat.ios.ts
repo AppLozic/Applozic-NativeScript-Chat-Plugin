@@ -207,6 +207,21 @@ export class ApplozicChat extends Common {
     }
   }
 
+  public disableNotifications(disable: boolean, successCallback: any, errorCallback: any) {
+     ALRegisterUserClientService.updateNotificationModeWithCompletion(disable ? 2 : 0, (response, error) => {
+       if (response) {
+         if (response.isRegisteredSuccessfully()) {
+           ALUserDefaultsHandler.setNotificationMode(disable ? 2 : 0);
+           successCallback("success");
+         } else {
+           errorCallback(response.dictionary());
+         }
+       } else {
+         errorCallback(JSON.stringify(error));
+       }
+     });
+  }
+
   public defaultSettings() {
     ALApplozicSettings.setStatusBarBGColor(UIColor.colorWithRedGreenBlueAlpha(66.0 / 255, 173.0 / 255, 247.0 / 255, 1));
     /* BY DEFAULT Black:UIStatusBarStyleDefault IF REQ. White: UIStatusBarStyleLightContent  */

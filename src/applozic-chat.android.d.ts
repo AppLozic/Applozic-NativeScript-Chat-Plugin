@@ -14,4 +14,5 @@ export declare class ApplozicChat extends Common {
   showOnlyMyContacts(): void;
   private _getAndroidContext();
   private _getCurrentActivity();
+  disableNotifications(disable: boolean, successCallback: any, errorCallback: any): void;
 }

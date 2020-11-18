@@ -38,4 +38,7 @@ export class Common extends Observable {
   public getUnreadCountForChannel(groupId: number, successCallback: any) {}
 
   public getUnreadCountForContact(contactId: string, successCallback: any) {}
+
+  public disableNotifications(disable: boolean, successCallback: any, errorCallback: any) {}
+
 }

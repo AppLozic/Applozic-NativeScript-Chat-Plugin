@@ -16,4 +16,5 @@ export declare class Common extends Observable {
     createGroup(groupInfo: any, successCallback: any, errorCallback: any): void;
     addContacts(contacts: any, successCallback: any, errorCallback: any): void;
     showOnlyMyContacts(): void;
+    disableNotifications(disable: boolean, successCallback: any, errorCallback: any): void;
 }
