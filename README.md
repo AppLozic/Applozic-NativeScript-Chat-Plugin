@@ -21,7 +21,7 @@ tns plugin add nativescript-applozic-chat@2.1.0
 > For NativeScript 6 compatibility, run.
 
 ```bash
-tns plugin add nativescript-applozic-chat@1.6.0
+tns plugin add nativescript-applozic-chat@1.7.0
 ```
 
 Goto src folder and run
