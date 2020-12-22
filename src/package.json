@@ -1,6 +1,6 @@
 {
   "name": "nativescript-applozic-chat",
-  "version": "1.7.0",
+  "version": "1.7.2",
   "description": "Nativescript plugin from Applozic that wraps the Native chat UI for android and iOS",
   "main": "applozic-chat",
   "typings": "index.d.ts",

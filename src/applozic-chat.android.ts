@@ -52,7 +52,7 @@ export class ApplozicChat extends Common {
     });
 
     const task = new com.applozic.mobicomkit.api.account.user.UserLoginTask(user, listener, ctx);
-    task.execute(arg);
+    com.applozic.mobicommons.task.AlTask.execute(task);
   }
 
   public registerForPushNotification(successCallback, errorCallback) {
@@ -78,7 +78,7 @@ export class ApplozicChat extends Common {
       listener,
       ctx
     );
-    task.execute(args);
+    com.applozic.mobicommons.task.AlTask.execute(task);
   }
 
   public refreshToken(token: any, successCallback, errorCallback) {
@@ -100,7 +100,7 @@ export class ApplozicChat extends Common {
     });
 
     const task = new com.applozic.mobicomkit.api.account.user.PushNotificationTask(token, listener, ctx);
-    task.execute(args);
+    com.applozic.mobicommons.task.AlTask.execute(task);
   }
 
   public launchChat() {
@@ -168,7 +168,7 @@ export class ApplozicChat extends Common {
       new java.lang.Integer(groupId),
       listener
     );
-    task.execute(args);
+    com.applozic.mobicommons.task.AlTask.execute(task);
   }
 
   public proccessNotification(data: any) {
@@ -193,7 +193,7 @@ export class ApplozicChat extends Common {
     });
 
     const task = new com.applozic.mobicomkit.api.account.user.UserLogoutTask(listener, ctx);
-    task.execute(args);
+    com.applozic.mobicommons.task.AlTask.execute(task);
   }
 
   public showAllRegisteredUsers(showAll: boolean) {
@@ -221,7 +221,8 @@ export class ApplozicChat extends Common {
       }
     });
 
-    new com.applozic.mobicomkit.uiwidgets.async.AlChannelCreateAsyncTask(ctx, channelInfo, listener).execute(null);
+    const task = new com.applozic.mobicomkit.uiwidgets.async.AlChannelCreateAsyncTask(ctx, channelInfo, listener);
+    com.applozic.mobicommons.task.AlTask.execute(task);
   }
 
   public addContacts(contacts: any) {
