@@ -15,7 +15,7 @@
 
 
 ```bash
-tns plugin add nativescript-applozic-chat@2.0.0
+tns plugin add nativescript-applozic-chat@2.2.0
 ```
 
 > For NativeScript 6 compatibility, run.
@@ -34,7 +34,7 @@ npm run demo.ios
 
 ##### JavaScript
 
-Add import 
+Add import
 ```js
 var nativescript_applozic_chat = require("nativescript-applozic-chat");
 ```
@@ -46,7 +46,7 @@ var applozicChat = new nativescript_applozic_chat.ApplozicChat();
 
 ##### TypeScript
 
-Add import 
+Add import
 ```js
 import { ApplozicChat } from "nativescript-applozic-chat";
 ```
